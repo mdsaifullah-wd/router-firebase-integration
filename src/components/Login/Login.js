@@ -6,7 +6,7 @@ const Login = () => {
   const [signInWithGoogle] = useSignInWithGoogle(auth);
   return (
     <div>
-      <h2>This is login</h2>
+      <h2>Please login</h2>
       <button onClick={() => signInWithGoogle()} style={{ marginTop: '20px' }}>
         Sign in With Google
       </button>
