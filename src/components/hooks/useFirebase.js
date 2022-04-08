@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import {
   getAuth,
   GoogleAuthProvider,
@@ -39,9 +39,11 @@ const useFirebase = () => {
         console.log(credential);
       });
   };
-  onAuthStateChanged(auth, (user) => {
-    setUser(user);
-  });
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+      setUser(user);
+    });
+  }, []);
   const handleSignOut = () => {
     signOut(auth)
       .then(() => {
