@@ -12,7 +12,7 @@ const Header = () => {
       <nav>
         <Link to={'/'}>Home</Link>
         <Link to={'/product'}>Product</Link>
-        <Link to={'/reviews'}>Reviews</Link>
+        <Link to={'/orders'}>Orders</Link>
         <Link to={'/register'}>Register</Link>
         <span>{user?.displayName && user.displayName}</span>
         {user?.uid ? (
